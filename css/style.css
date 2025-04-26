@@ -1,0 +1,220 @@
+/* start first bage */
+.bage.one {height: 900px;}
+aside.larg {
+    width: 200px;
+}
+aside.larg ol > .active {
+    width: 100%;
+    background-color: #cfb9eb;
+    color: var(--color-purple);
+}
+.content.d-grid {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 61px;
+    position: relative;
+    background: url(../images/back2.png) no-repeat center center / cover;
+}
+.content.d-grid::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #000000a3;
+    border-radius: 11px;
+}
+.content.d-grid * {position: relative;z-index: 100;}
+.content.d-grid a > h1 {
+    -webkit-text-stroke: 1px var(--gold-color);
+    -webkit-text-fill-color: #fff;}
+.content.d-grid a > span {color: var(--green-color);}
+.content > p {
+    font-family: 'Amiri Quran', serif;
+    line-height: 1.5;
+    font-size: 41px;
+    color: var(--green-color);
+    font-weight: bolder;
+}
+div.search {
+    flex-direction: row-reverse;}
+div.search i {
+    color: var(--green-color);
+    margin: 7px;
+    transform: rotate(-77deg);
+    transition: var(--maine-transition);
+}
+div.search input:focus + i {
+    animation: turn 3s infinite linear;
+    -webkit-animation: turn 3s infinite linear;
+}
+@keyframes turn {
+    0%, 100% {transform: rotate(-77deg);}
+    50% {transform: rotate(-177deg);}
+}
+div.search input {
+    border: var(--main-border);
+    border-radius: 7px;
+    background-color: #000;
+    text-align: center;
+    caret-color: var(--green-color);
+    padding: 3px 11px;
+    width: 200px;
+    height: 27px;
+    font-size: 11px;
+    transition: var(--maine-transition);
+}
+@media (min-width:768px) {
+    div.search input:focus {
+        width: 231px;
+    }
+}
+div.search input::placeholder {
+    color:var(--gold-color);
+    transition: var(--maine-transition);
+}
+div.search input:focus::placeholder {
+    opacity: 0;
+}
+/* end first bage */
+/* start one bage */
+.container.one {
+    grid-template-columns: 1fr;
+}
+/* end one bage */
+/* start aside */
+aside {
+    box-shadow: var(--box-shadow);
+    width: 123px;
+    position: relative;
+    background-color: var(--soft-purple);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 17px;
+    border-radius: 11px;
+    border: var(--main-border);
+    border-left: none;
+}
+aside h2 {
+    font-size: 21px;
+    text-align: center;
+    background-color: var(--gold-color);
+    padding: 7px 0;
+    width: 100%;
+    color: #fff;
+    font-family: 'Lateef', serif;
+    background-image:     
+    radial-gradient(rgba(0, 0, 0, 0) 0%,     
+    rgba(0, 0, 0, 0.5) 100%),     
+    radial-gradient(rgba(0, 0, 0, 0) 33%,     
+    rgba(0, 0, 0, 0.3) 166%);
+    border-radius: 11px 7px 0 0;
+}
+aside ol {
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+aside ol > a {
+    color: var(--color-purple);
+    display: block;
+}
+aside ol > .active {
+    position: fixed;
+    top: 53px;
+    width: 100%;
+    border-left: var(--main-border);
+    z-index: 1000;
+}
+aside ol > .active,
+aside ol li:hover {
+    background-color: #cfb9eb;
+}
+aside ol li > a {
+    color: #440044;
+}
+aside ol li:hover a {
+    padding: 21px 0;
+}
+/* end aside */
+/* start content */
+.content {
+    flex: 1;
+    padding: 0 11px;
+    background: url('../images/back1.png') no-repeat center center / cover;
+    border: var(--main-border);
+    border-radius: 11px;
+}
+/* start header */
+header {
+    height: 75px;
+    padding: 7px 0;
+}
+header p {
+    font-family: 'Amiri Quran', serif;
+    line-height: 1.5;
+    font-size: 21px;
+    color: var(--color-purple);
+    font-weight: bolder;
+    flex: 1;
+}
+header h1 {
+    -webkit-text-stroke: 1px var(--gold-color);
+    -webkit-text-fill-color: #fff;}
+header span {color: var(--color-purple);}
+/* end header */
+/* start container */
+.container {
+    grid-template-columns: 
+    repeat(auto-fill, minmax(250px, 1fr));
+    padding: 21px 0;
+}
+.container .box {
+    display: grid;
+    padding: 11px;
+    border: var(--main-border);
+    border-radius: 7px;
+    background-color: #f1f3f4;
+}
+.container .box h2 {
+    color: #3e570d;
+    font-size: 21px;
+    background-color: var(--soft-green);
+    height: 25px;
+    padding: 3px 0;
+}
+/* .container .box .custom-player {
+    display: flex;
+    justify-content: center;
+}
+.custom-player button {
+    padding: 3px 7px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    margin: 7px;
+    background-color: var(--gold-color);
+    transition: var(--maine-transition);
+    box-shadow: 0 0 7px var(--soft-green);
+}
+.custom-player button:focus {
+    background-color: var(--green-color);
+    box-shadow: 0 0 10px var(--gold-color);
+} */
+.container .box audio {
+    height: 30px;
+    width: 100%;
+    border-radius: 7px;
+}
+.container .box p {
+    font-family: 'Amiri Quran', serif;
+    line-height: 1.7;
+    font-size: 17px;
+}
+/* end container */
+/* end content */
