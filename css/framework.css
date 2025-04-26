@@ -48,5 +48,7 @@ h1 {margin: 0;}
     justify-content: center;
     gap: 21px;
 }
-.bage {min-height: 100%;
-      hight:fit-content} 
+.bage {
+    min-height: 100%;
+    height: fit-content;
+}
